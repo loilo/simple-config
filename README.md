@@ -85,9 +85,6 @@ There are four methods on the `Config` object that you may use to work with the 
   ```
 
 ### Options
-<!-- 
-Changes are written to disk atomically, so if the process crashes during a write, it will not corrupt the existing config. -->
-
 The `Config` object can be initialized with an associative array of options documented below.
 
 ```php
