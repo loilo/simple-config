@@ -84,6 +84,33 @@ There are four methods on the `Config` object that you may use to work with the 
   $config->delete()
   ```
 
+### Static Access
+Since app-wide configuration usually only ever requires one `Config` instance, you may not want to manually pass around that instance everywhere.
+
+In most frameworks, a dependency injection container solves this task for you. However, for cases where no such mechanism is set up, this package provides the `StaticConfig` class.
+
+It's an abstract class which you can extend in your project. The only thing you have to provide is a method to actually create a `Config` object. The simplest possible implementation therefore looks like this:
+
+```php
+use Loilo\SimpleConfig\StaticConfig;
+use Loilo\SimpleConfig\Config;
+
+class AppConfig extends StaticConfig
+{
+    public static function createConfig(): Config
+    {
+        return new Config();
+    }
+}
+```
+
+Now you can work with your configuration like this:
+
+```php
+AppConfig::set('foo', 'bar');
+AppConfig::get('foo') === 'bar';
+```
+
 ### Options
 The `Config` object can be initialized with an associative array of options documented below.
 

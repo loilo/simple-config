@@ -26,6 +26,11 @@
             "Loilo\\SimpleConfig\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Loilo\\SimpleConfig\\Test\\": "test/"
+        }
+    },
     "license": "MIT",
     "authors": [
         {

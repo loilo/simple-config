@@ -656,4 +656,22 @@ class ConfigTest extends TestCase
             'awesome' => 'redpanda'
         ], $config->get('foo.bar.zoo'));
     }
+
+    public function testSubclassStaticConfig()
+    {
+        TestableStaticConfig::$creations = 0;
+        TestableStaticConfig::$options = [
+            'configDir' => $this->tempdir()
+        ];
+
+        $this->assertInstanceOf(
+            Config::class,
+            TestableStaticConfig::getInstance()
+        );
+
+        TestableStaticConfig::set('foo', 'bar');
+        $this->assertSame('bar', TestableStaticConfig::get('foo'));
+
+        $this->assertSame(1, TestableStaticConfig::$creations);
+    }
 }
