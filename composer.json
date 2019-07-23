@@ -2,7 +2,7 @@
     "name": "loilo/simple-config",
     "description": "Simple persistent configuration for your app or module",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "require": {
         "php": ">= 7.1",
         "ext-json": "*",
