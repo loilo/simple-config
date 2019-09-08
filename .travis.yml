@@ -9,5 +9,5 @@ install:
   - composer install
 
 script:
-  - vendor/bin/phpunit --bootstrap vendor/autoload.php test
+  - vendor/bin/phpunit
   - vendor/bin/phpcs --standard=psr2 src test -n
