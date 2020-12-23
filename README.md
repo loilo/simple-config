@@ -3,7 +3,7 @@
 </div>
 
 # Simple Config
-[![Test status on Travis](https://badgen.net/travis/loilo/simple-config?label=tests&icon=travis)](https://travis-ci.org/loilo/simple-config)
+[![Tests](https://badgen.net/github/checks/loilo/simple-config/master)](https://github.com/loilo/simple-config/actions)
 [![Version on packagist.org](https://badgen.net/packagist/v/loilo/simple-config)](https://packagist.org/packages/loilo/simple-config)
 
 > Simple persistent configuration for your app or module, heavily inspired by Sindre Sorhus' [conf](https://www.npmjs.com/package/conf) package.
