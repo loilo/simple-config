@@ -75,12 +75,12 @@ class ConfigTest extends TestCase
         return $path;
     }
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         static::$fs = new XFilesystem();
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->config = new Config([
             'configDir' => $this->tempdir()
