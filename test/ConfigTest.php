@@ -351,8 +351,8 @@ class ConfigTest extends TestCase
         ]);
 
         $this->assertSame(
-            $configDir,
-            substr($config->getFilePath(), 0, strlen($configDir))
+            str_replace('\\', '/', $configDir),
+            str_replace('\\', '/', substr($config->getFilePath(), 0, strlen($configDir)))
         );
         $this->assertSame(null, $config->get('foo'));
         $config->set('foo', static::$fixture);
